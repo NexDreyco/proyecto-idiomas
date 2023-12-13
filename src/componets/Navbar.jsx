@@ -12,9 +12,13 @@ const Navbar = () => {
           style={{ backgroundImage: `url(${menu1})` }}
         >
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <Link
+              class="nav-link active navbar-brand"
+              aria-current="page"
+              to="/"
+            >
               Instituto de aprendizaje de Idiomas
-            </a>
+            </Link>
             <button
               class="navbar-toggler"
               type="button"
@@ -45,19 +49,42 @@ const Navbar = () => {
                 </li>
                 <li>
                   <NavDropdown title="Idiomas" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="/ingles">Ingles</NavDropdown.Item>
-                    <NavDropdown.Item href="/español">Español</NavDropdown.Item>
-                    <NavDropdown.Item href="/frances">Frances</NavDropdown.Item>
-                    <NavDropdown.Item href="/chino">Chino</NavDropdown.Item>
-                    <NavDropdown.Item href="/portugues">
-                      Portugues
+                    <NavDropdown.Item>
+                      <Link class="nav-link" to="/Ingles">
+                        Ingles
+                      </Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item>
+                      <Link class="nav-link" to="/Español">
+                        Español
+                      </Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item>
+                      <Link class="nav-link" to="/Frances">
+                        Frances
+                      </Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item>
+                      <Link class="nav-link" to="/Chino">
+                        Chino
+                      </Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item>
+                      <Link class="nav-link" to="/Portugues">
+                        Portugues
+                      </Link>
                     </NavDropdown.Item>
                   </NavDropdown>
                   <li class="nav-item"></li>
                 </li>
                 <Link class="nav-link" to="/creditos">
-                    Creditos
+                  Creditos
+                </Link>
+                <li class="nav-item">
+                  <Link class="nav-link" to="/galeria">
+                    Video de idiomas
                   </Link>
+                </li>
               </ul>
             </div>
           </div>
